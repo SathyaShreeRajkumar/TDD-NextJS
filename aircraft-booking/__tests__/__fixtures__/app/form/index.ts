@@ -8,7 +8,9 @@ export const mockUserDetails: UserDetail = {
     phone: faker.number.int(),
     address: faker.lorem.words(4),
     city: faker.location.city(),
-    postalCode: faker.location.zipCode()
+    postalCode: faker.location.zipCode(),
+    boarding: faker.location.city(),
+    destination: faker.location.city()
 }
 
 export const invalidUserDetailsMock = {

@@ -29,3 +29,11 @@ export const CITY_VALIDATION = {
 export const POSTAL_CODE_VALIDATION = {
     POSTAL_CODE_REQUIRED: 'Postal code is required'
 }
+
+export const BOARDING_VALIDATION = {
+    BOARDING_REQUIRED: 'Boarding is required'
+}
+
+export const DESTINATION_VALIDATION = {
+    DESTINATION_REQUIRED: 'Destination is required'
+}

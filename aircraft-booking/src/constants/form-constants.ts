@@ -1,4 +1,4 @@
-export const USER_DETAILS_CONST = {
+export const FORM_CONST = {
     FORM_TITLE_LABEL: 'USER DETAILS',
     FIRST_NAME_LABEL: 'First Name:',
     LAST_NAME_LABEL: 'Last Name:',
@@ -12,10 +12,14 @@ export const USER_DETAILS_CONST = {
     EMAIL_PLACEHOLDER: 'Email',
     PHONE_PLACEHOLDER: 'Phone',
     ADDRESS_PLACEHOLDER: 'Address',
-    POSTAL_CODE_PLACEHOLDER: 'Postal Code'
+    POSTAL_CODE_PLACEHOLDER: 'Postal Code',
+    BOARDING_LABEL: 'Boarding',
+    BOARDING_PLACEHOLDER: 'Boarding',
+    DESTINATION_LABEL: 'Destination',
+    DESTINATION_PLACEHOLDER: 'Destination'
 }
 
 export const BUTTON_CONST = {
     NEW_USER_LABEL: 'New User',
-    SAVE_LABEL: 'Save'
+    SUBMIT_LABEL: 'Submit'
 }

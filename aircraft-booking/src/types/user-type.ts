@@ -6,4 +6,6 @@ export type UserDetail = {
     address: string
     city: string
     postalCode: string
+    boarding: string
+    destination: string
 }
