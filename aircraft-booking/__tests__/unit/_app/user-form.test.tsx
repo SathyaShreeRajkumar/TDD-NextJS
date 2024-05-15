@@ -9,33 +9,34 @@ import {
     PHONE_VALIDATION
 } from '@/constants/validation-errors'
 import { fireEvent, render, screen, waitFor } from '@testing-library/react'
+import '@testing-library/jest-dom'
 import { invalidUserDetailsMock, mockUserDetails } from '../../__fixtures__/app/form'
 
 describe('UserForm', () => {
     test('should render user form labels properly', () => {
         render(<FormComponent />)
-        expect(screen.getByText(FORM_CONST.FIRST_NAME_LABEL)).toBeDefined()
-        expect(screen.getByText(FORM_CONST.LAST_NAME_LABEL)).toBeDefined()
-        expect(screen.getByText(FORM_CONST.EMAIL_LABEL)).toBeDefined()
-        expect(screen.getByText(FORM_CONST.PHONE_LABEL)).toBeDefined()
-        expect(screen.getByText(FORM_CONST.ADDRESS_LABEL)).toBeDefined()
+        expect(screen.getByLabelText(FORM_CONST.FIRST_NAME_LABEL)).toBeInTheDocument()
+        expect(screen.getByLabelText(FORM_CONST.LAST_NAME_LABEL)).toBeInTheDocument()
+        expect(screen.getByLabelText(FORM_CONST.EMAIL_LABEL)).toBeInTheDocument()
+        expect(screen.getByLabelText(FORM_CONST.PHONE_LABEL)).toBeInTheDocument()
+        expect(screen.getByLabelText(FORM_CONST.ADDRESS_LABEL)).toBeInTheDocument()
     })
 
     test('should render user form placeholders properly', () => {
         render(<FormComponent />)
-        expect(screen.getByPlaceholderText(FORM_CONST.FIRST_NAME_PLACEHOLDER)).toBeDefined()
-        expect(screen.getByPlaceholderText(FORM_CONST.LAST_NAME_PLACEHOLDER)).toBeDefined()
-        expect(screen.getByPlaceholderText(FORM_CONST.EMAIL_PLACEHOLDER)).toBeDefined()
-        expect(screen.getByPlaceholderText(FORM_CONST.PHONE_PLACEHOLDER)).toBeDefined()
-        expect(screen.getByPlaceholderText(FORM_CONST.ADDRESS_PLACEHOLDER)).toBeDefined()
+        expect(screen.getByPlaceholderText(FORM_CONST.FIRST_NAME_PLACEHOLDER)).toBeInTheDocument()
+        expect(screen.getByPlaceholderText(FORM_CONST.LAST_NAME_PLACEHOLDER)).toBeInTheDocument()
+        expect(screen.getByPlaceholderText(FORM_CONST.EMAIL_PLACEHOLDER)).toBeInTheDocument()
+        expect(screen.getByPlaceholderText(FORM_CONST.PHONE_PLACEHOLDER)).toBeInTheDocument()
+        expect(screen.getByPlaceholderText(FORM_CONST.ADDRESS_PLACEHOLDER)).toBeInTheDocument()
     })
 
-    test('should render header and footer properly', () => {
+    test('should render footer properly', () => {
         render(<FormComponent />)
         const SubmitButton = screen.getByRole('button', {
             name: BUTTON_CONST.SUBMIT_LABEL
         })
-        expect(SubmitButton).toBeDefined()
+        expect(SubmitButton).toBeInTheDocument()
     })
 })
 
@@ -53,11 +54,11 @@ describe('Form Validation', () => {
         const phoneError = await screen.findByText(PHONE_VALIDATION.PHONE_REQUIRED)
         const addressError = await screen.findByText(ADDRESS_VALIDATION.ADDRESS_REQUIRED)
 
-        expect(firstNameError).toBeDefined()
-        expect(lastNameError).toBeDefined()
-        expect(emailNameError).toBeDefined()
-        expect(phoneError).toBeDefined()
-        expect(addressError).toBeDefined()
+        expect(firstNameError).toBeInTheDocument()
+        expect(lastNameError).toBeInTheDocument()
+        expect(emailNameError).toBeInTheDocument()
+        expect(phoneError).toBeInTheDocument()
+        expect(addressError).toBeInTheDocument()
     })
 
     test('should display error when invalid values are provided', async () => {
@@ -88,10 +89,10 @@ describe('Form Validation', () => {
         const emailNameError = await screen.findByText(EMAIL_VALIDATION.INVALID_EMAIL)
         const phoneError = await screen.findByText(PHONE_VALIDATION.INVALID_PHONE)
 
-        expect(firstNameError).toBeDefined()
-        expect(lastNameError).toBeDefined()
-        expect(emailNameError).toBeDefined()
-        expect(phoneError).toBeDefined()
+        expect(firstNameError).toBeInTheDocument()
+        expect(lastNameError).toBeInTheDocument()
+        expect(emailNameError).toBeInTheDocument()
+        expect(phoneError).toBeInTheDocument()
     })
 
     test('should Submit form when Submit button is clicked with valid data', async () => {
@@ -132,7 +133,7 @@ describe('Form Validation', () => {
         fireEvent.click(SubmitButton)
 
         await waitFor(() => {
-            expect(COMMON_TOAST.SUCCESS).toBeDefined()
+            expect(COMMON_TOAST.SUCCESS).toBeInTheDocument()
         })
     })
 })

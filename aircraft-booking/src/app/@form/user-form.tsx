@@ -41,7 +41,7 @@ const FormComponent = () => {
         formState: { errors }
     } = form
 
-    const onSubmit: SubmitHandler<UserTypeForm> = async () => {
+    const onSubmit: SubmitHandler<UserTypeForm> = () => {
         try {
             toast({
                 description: COMMON_TOAST.SUCCESS
