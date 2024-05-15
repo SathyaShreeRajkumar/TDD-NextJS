@@ -1,0 +1,52 @@
+[
+    {
+        "flightNumber": "111",
+        "airline": "AirIndia Airlines",
+        "boarding": "Chennai",
+        "departureDateTime": "2024-05-15T08:00:00",
+        "destination": "Mumbai",
+        "arrivalDateTime": "2024-05-15T11:00:00",
+        "price": 500.0,
+        "seatsAvailable": 10
+    },
+    {
+        "flightNumber": "222",
+        "airline": "Indigo Airlines",
+        "boarding": "Delhi",
+        "departureDateTime": "2024-05-15T08:00:00",
+        "destination": "Pune",
+        "arrivalDateTime": "2024-05-15T11:00:00",
+        "price": 500.0,
+        "seatsAvailable": 10
+    },
+    {
+        "flightNumber": "333",
+        "airline": "SpiceJet Airlines",
+        "boarding": "Coimbatore",
+        "departureDateTime": "2024-05-15T08:00:00",
+        "destination": "Kochi",
+        "arrivalDateTime": "2024-05-15T11:00:00",
+        "price": 500.0,
+        "seatsAvailable": 10
+    },
+    {
+        "flightNumber": "444",
+        "airline": "Qatar Airlines",
+        "boarding": "Assam",
+        "departureDateTime": "2024-05-15T08:00:00",
+        "destination": "Rajasthan",
+        "arrivalDateTime": "2024-05-15T11:00:00",
+        "price": 500.0,
+        "seatsAvailable": 10
+    },
+    {
+        "flightNumber": "555",
+        "airline": "Lufthansa Airlines",
+        "boarding": "Bengaluru",
+        "departureDateTime": "2024-05-15T08:00:00",
+        "destination": "Goa",
+        "arrivalDateTime": "2024-05-15T11:00:00",
+        "price": 500.0,
+        "seatsAvailable": 10
+    }
+]
